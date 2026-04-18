@@ -10,6 +10,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #0b0f1a;
   color: #e6e6e6;
+  background: radial-gradient(circle at top, #0b0f1a, #020617);
 }
 
 /* Container central */
@@ -82,4 +83,105 @@ tbody tr {
 
 tbody tr:hover {
   background-color: #1a2235;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  background-color: #111827;
+  border-radius: 10px;
+  padding: 16px;
+  transition: 0.3s;
+  border: 1px solid #2d3748;
+}
+
+/* Hover bonito */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Nome do planeta */
+.card h2 {
+  color: #ffe81f;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Textos */
+.card p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* Destaque labels */
+.card strong {
+  color: #9ca3af;
+}
+
+/* CONTAINER DO FILTRO */
+.filters-container {
+  background-color: #111827;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  border: 1px solid #2d3748;
+}
+
+/* GRID ORGANIZADO */
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  align-items: end;
+}
+
+/* LABEL */
+.filters-container label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* INPUTS */
+.filters-container input,
+.filters-container select,
+.filters-container textarea {
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #2d3748;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+/* TEXTAREA menor */
+.filters-container textarea {
+  resize: none;
+  height: 38px;
+}
+
+/* BOTÕES */
+.filters-container button {
+  height: 38px;
+  background-color: #ffe81f;
+  color: #000;
+  font-weight: bold;
+}
+
+/* BOTÃO ORDENAR destaque secundário */
+.filters-container button:last-child {
+  background-color: #374151;
+  color: #fff;
+}
+
+.filters-title {
+  margin-bottom: 12px;
+  color: #ffe81f;
 }
