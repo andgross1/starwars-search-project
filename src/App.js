@@ -7,8 +7,11 @@ import Provider from './context/myProvider';
 function App() {
   return (
     <Provider>
-      <Filters />
-      <Planets />
+      <div className="container">
+        <h1>Star Wars Planets</h1>
+        <Filters />
+        <Planets />
+      </div>
     </Provider>
   );
 }
